@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  --color-midnight: #0F1720;
+  --color-midnight-light: #16202A;
+  --color-surface: #1C2733;
+  --color-ivory: #F7F4EE;
+  --color-brass: #B08D57;
+  --color-stone: #D6D0C4;
+  --color-slate: #6B7280;
+  --color-ink: #111827;
+  
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+@layer base {
+  body {
+    @apply font-sans bg-ivory text-ink antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif tracking-tight;
+  }
+}
+
+.nav-premium {
+  @apply bg-midnight border-b border-white/5;
+}
+
+.divider-subtle {
+  @apply border-t border-stone/30;
+}
+
+.btn-executive {
+  @apply px-10 py-4 bg-brass text-white font-medium tracking-widest uppercase text-xs transition-all duration-500 hover:bg-brass/90 hover:shadow-2xl active:scale-[0.98];
+}
+
+.btn-ghost {
+  @apply px-10 py-4 border border-stone text-ink font-medium tracking-widest uppercase text-xs transition-all duration-500 hover:bg-midnight hover:text-white hover:border-midnight active:scale-[0.98];
+}
+
+.section-padding {
+  @apply py-32 md:py-48;
+}
+
+.container-wide {
+  @apply max-w-7xl mx-auto px-8 md:px-12;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
