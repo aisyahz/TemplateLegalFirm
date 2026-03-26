@@ -21,29 +21,29 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-700 ${scrolled ? 'nav-premium py-5' : 'bg-transparent py-8'}`}>
+    <nav className={`fixed w-full z-50 transition-all duration-700 nav-executive ${scrolled ? 'py-4' : 'py-6'}`}>
       <div className="container-wide flex justify-between items-center">
         <Link to="/" className="flex items-center gap-3 group">
-          <Scale className={`w-7 h-7 transition-colors duration-500 ${scrolled ? 'text-brass' : 'text-white'}`} />
-          <span className="text-xl font-serif font-semibold tracking-tighter text-white">
+          <Scale className="w-6 h-6 text-brass transition-all duration-700" />
+          <span className="text-lg font-serif font-semibold tracking-tighter text-white">
             LEXINGTON<span className="text-brass font-normal mx-0.5">&</span>CO.
           </span>
         </Link>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-12">
+        <div className="hidden md:flex items-center gap-10">
           {navLinks.map((link) => (
             <Link
               key={link.path}
               to={link.path}
-              className={`text-[11px] uppercase tracking-[0.25em] font-medium transition-all duration-500 hover:text-brass ${
+              className={`text-[10px] uppercase tracking-[0.3em] font-semibold transition-all duration-700 hover:text-brass ${
                 location.pathname === link.path ? 'text-brass' : 'text-white/70'
               }`}
             >
               {link.name}
             </Link>
           ))}
-          <Link to="/contact" className="btn-executive !py-2.5 !px-7 !text-[10px]">
+          <Link to="/contact" className="btn-executive">
             Speak With Our Team
           </Link>
         </div>
@@ -59,14 +59,14 @@ export default function Navbar() {
         <motion.div 
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="md:hidden absolute top-full left-0 w-full bg-midnight border-t border-white/5 p-8 flex flex-col gap-6"
+          className="md:hidden absolute top-full left-0 w-full bg-midnight border-t border-white/10 p-10 flex flex-col gap-8 shadow-2xl"
         >
           {navLinks.map((link) => (
             <Link
               key={link.path}
               to={link.path}
               onClick={() => setIsOpen(false)}
-              className={`text-sm uppercase tracking-widest font-medium ${location.pathname === link.path ? 'text-brass' : 'text-white/80'}`}
+              className={`text-[10px] uppercase tracking-[0.3em] font-semibold transition-all duration-500 ${location.pathname === link.path ? 'text-brass' : 'text-white/70'}`}
             >
               {link.name}
             </Link>

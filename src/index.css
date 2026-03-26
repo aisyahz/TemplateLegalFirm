@@ -26,8 +26,8 @@
   }
 }
 
-.nav-premium {
-  @apply bg-midnight border-b border-white/5;
+.nav-executive {
+  @apply bg-midnight border-b border-white/10 shadow-2xl;
 }
 
 .divider-subtle {
@@ -35,7 +35,7 @@
 }
 
 .btn-executive {
-  @apply px-10 py-4 bg-brass text-white font-medium tracking-widest uppercase text-xs transition-all duration-500 hover:bg-brass/90 hover:shadow-2xl active:scale-[0.98];
+  @apply px-8 py-3 bg-brass text-white font-semibold tracking-[0.2em] uppercase text-[10px] transition-all duration-700 hover:bg-white hover:text-midnight hover:shadow-2xl active:scale-[0.98];
 }
 
 .btn-ghost {
